@@ -100,7 +100,9 @@ var fake = [
     "size": 25,
     "time": 5,
   }
-] 
+];
+
+var fake = clubData;
 
 var ResultsContainer = React.createClass({
   getInitialState: function() {

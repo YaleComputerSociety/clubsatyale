@@ -26092,6 +26092,8 @@
 	  "time": 5
 	}];
 
+	var fake = clubData;
+
 	var ResultsContainer = React.createClass({
 	  displayName: 'ResultsContainer',
 
