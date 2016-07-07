@@ -26,7 +26,7 @@ var ClubPage = require('../components/Club');
 var routes = (
     <Router history={browserHistory}>
         <Route path="index" component={Index} />
-        
+
         <Route path="/clubsatyale/" component={Index} hasQuery={false}/>
         <Route path="/clubsatyale/test/:id" component={Index} hasQuery={true}/>
         <Route path="/clubsatyale/:id" component={ClubPage} hasQuery={true}/>
