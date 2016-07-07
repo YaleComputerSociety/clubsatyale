@@ -25908,9 +25908,9 @@
 	    Router,
 	    { history: _reactRouter.browserHistory },
 	    React.createElement(Route, { path: 'index', component: Index }),
-	    React.createElement(Route, { path: '/', component: Index, hasQuery: false }),
-	    React.createElement(Route, { path: '/test/:id', component: Index, hasQuery: true }),
-	    React.createElement(Route, { path: '/:id', component: ClubPage, hasQuery: true })
+	    React.createElement(Route, { path: '/clubsatyale/', component: Index, hasQuery: false }),
+	    React.createElement(Route, { path: '/clubsatyale/test/:id', component: Index, hasQuery: true }),
+	    React.createElement(Route, { path: '/clubsatyale/:id', component: ClubPage, hasQuery: true })
 	);
 
 	module.exports = routes;

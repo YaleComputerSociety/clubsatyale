@@ -27,9 +27,9 @@ var routes = (
     <Router history={browserHistory}>
         <Route path="index" component={Index} />
         
-        <Route path="/" component={Index} hasQuery={false}/>
-        <Route path="/test/:id" component={Index} hasQuery={true}/>
-        <Route path="/:id" component={ClubPage} hasQuery={true}/>
+        <Route path="/clubsatyale/" component={Index} hasQuery={false}/>
+        <Route path="/clubsatyale/test/:id" component={Index} hasQuery={true}/>
+        <Route path="/clubsatyale/:id" component={ClubPage} hasQuery={true}/>
     </Router>
 );
 
