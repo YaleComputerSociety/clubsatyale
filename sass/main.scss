@@ -1,0 +1,46 @@
+
+@import 'pages/club';
+@import 'pages/editor';
+
+@import 'components/index/indexheader';
+@import 'components/index/results';
+@import 'components/index/query';
+@import 'components/index/resultslist';
+
+@import 'components/club/navbar';
+@import 'components/club/clubinfo';
+@import 'components/club/clubheader';
+@import 'components/club/content';
+@import 'components/club/clubstats';
+
+@import 'components/explorebar';
+@import 'components/footer';
+
+.container {
+  width: 860px;
+  position: relative;
+}
+
+
+.main {
+    width: 960px;
+    margin: 80px auto;
+    background: #FFFFFF;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+[data-category-bg] {
+  &[data-category-bg=STEM] { color: #3498DB; }
+  &[data-category-bg=athletics] { color: #F22613; }
+  &[data-category-bg=arts] { color: #2ECC71; }
+  &[data-category-bg=politics] { color: #8E44AD; }
+  &[data-category-bg=activism] { color: #ffcc33; }
+  &[data-category-bg=business] { color: #95A5A6; }
+  &[data-category-bg=outreach] { color: #65C6BB; }
+  &[data-category-bg=greek] { color: #F9690E; }
+  &[data-category-bg=others] { color: #D2D7D3; }
+}

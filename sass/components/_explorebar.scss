@@ -1,0 +1,47 @@
+.ExploreBar {
+  padding: 0;
+  margin-top: 20px;
+  // background: #FFF;
+  font-family: Avenir;
+  padding: 10px 0;
+  
+  & > *, li {
+    display: inline-block;
+    line-height: 30px;
+  }
+  
+  label {
+    margin-right: 10px;
+    font-size: 17px;
+    color: #888;
+    font-weight: 400;
+  }
+  
+  li {
+    margin-right: 10px;
+    font-size: 17px;
+    font-weight: 500;
+    text-transform: uppercase;
+    
+    a {
+      text-decoration: none;
+      
+      &:hover {
+        border-bottom: 2px solid currentColor;
+      }
+    }
+  }
+}
+
+.tag-background {
+  &[data-category=STEM] { background: #3498DB; }
+  &[data-category=athletics] { background: #F22613; }
+  &[data-category=arts] { background: #2ECC71; }
+  &[data-category=politics] { background: #8E44AD; }
+  &[data-category=activism] { background: #ffcc33; }
+  &[data-category=business] { background: #95A5A6; }
+  &[data-category=outreach] { background: #65C6BB; }
+  &[data-category=greek] { background: #F9690E; }
+  &[data-category=others] { background: #D2D7D3; }
+}
+

@@ -1,0 +1,40 @@
+.ClubStats {
+  padding-right: 10px;
+  
+  & > li, & > ul > li {
+    list-style: none;
+    font-size: 16px;
+    $lh: 50px; // line-height
+    
+    & > * {
+      vertical-align: middle;
+      display: inline-block;
+      line-height: $lh;
+    }
+    
+    i {
+      margin-right: 7px;
+      vertical-align: middle;
+    }
+    
+    &.strip {
+      border-top: 1px solid #EEE;
+      padding-top: 10px;
+      margin-top: 10px;
+      height: 1px;
+    }
+    
+    label {
+      font-weight: 400;
+      margin: 0;
+    }
+    
+    .answer {
+      float: right;
+      
+      span, i {
+        vertical-align: middle;
+      }
+    }
+  }
+}

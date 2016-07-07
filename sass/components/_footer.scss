@@ -1,0 +1,24 @@
+.Footer {
+  padding: 50px 40px;
+  font-family: Avenir;
+  color: #888;
+  background: #EEE;
+  
+  ul {
+    display: table;
+  }
+  ul.right {
+    float: right;
+  }
+  
+  li {
+    list-style: none;
+    display: inline-block;
+    font-size: 15px;
+    margin-right: 20px;
+    
+    a {
+      color: #3498DB;
+    }
+  }
+}

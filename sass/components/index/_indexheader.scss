@@ -1,0 +1,23 @@
+.IndexHeader {
+  padding: 50px 40px;
+  background: #19B5FE;
+  font-family: Avenir;
+  color: white;
+  
+  .container {
+    width: 900px;
+    position: relative;
+  }
+
+  h1 {
+    font-family: Avenir;
+    font-size: 50px;
+    font-weight: 600;
+  }
+  
+  h2 {
+    color: rgba(0,0,0,.5);
+    font-family: Avenir;
+    font-size: 24px;
+  }
+}

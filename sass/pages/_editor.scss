@@ -1,0 +1,81 @@
+
+.EditorFormPage {
+  .mdl-list__item-secondary-action {
+    padding-left: 20px;
+    
+    .mdl-js-textfield, .getmdl-select {
+      width: 500px !important;
+    }
+    
+    & > .big {
+      width: 500px !important;
+    }
+  }
+  
+  #images-sec {
+    img {
+      height: 100px;
+    }
+  }
+  
+  form {
+    padding-bottom: 50px;
+  }
+  
+  .form-buttons {
+    margin-top: 30px;
+    
+    .mdl-button--delete {
+      color: salmon;
+    }
+    
+    .right {
+      float: right;
+    }
+  }
+  
+  textarea {
+    // resize: none;
+    overflow: hidden;
+    min-height: 30px;
+    padding: 5px;
+    line-height: 1.4;
+    border: 1px solid #DDD;
+    // max-height: 200px;
+  }
+  
+  .mdl-list__item--three-line {
+    min-height: 88px;
+    height: auto;
+  }
+}
+
+.mdl-list__item.mdl-list__item--three-line{
+  overflow: initial;
+}
+
+.getmdl-select .mdl-icon-toggle__label {float:right;margin-top:-30px;color:rgba(0,0,0,0.4)}
+.getmdl-select.is-focused .mdl-icon-toggle__label{color:#3f51b5}
+.getmdl-select .mdl-menu__container{width:100% !important}
+.getmdl-select .mdl-menu__container .mdl-menu .mdl-menu__item{
+  font-size: 16px;
+  font-family: Roboto;
+}
+
+.getmdl-select {
+::-webkit-input-placeholder { font-family: Roboto; color: rgba(0,0,0,.26); letter-spacing: .04em; }
+:-moz-placeholder { font-family: Roboto; color: rgba(0,0,0,.26); letter-spacing: .04em; }
+::-moz-placeholder { font-family: Roboto; color: rgba(0,0,0,.26); letter-spacing: .04em; }
+:-ms-input-placeholder { font-family: Roboto; color: rgba(0,0,0,.26); letter-spacing: .04em; }
+}
+.getmdl-select__fullwidth .mdl-menu{width:100%}
+
+.EditorPage {
+  table {
+    max-width: 600px;
+    
+    .visible {
+      color: #8bc34a;
+    }
+  }
+}

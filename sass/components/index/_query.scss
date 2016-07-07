@@ -1,0 +1,35 @@
+.Query {
+  box-shadow: 0 0 3px rgba(0,0,0,.1);
+  background: white;
+  border-bottom: 1px solid #EEE;
+  
+  form {
+    position: relative;
+
+    i {
+      position: absolute;
+      left: 0; // 10px;
+      line-height: 80px;
+      font-size: 30px;
+      color: #888;
+    }
+    
+    input {
+      border: 0;
+      padding: 0 20px;
+      padding-left: 45px;
+      width: 100%;
+      font-size: 20px;
+      line-height: 80px;
+      color: #444;
+      font-family: museo-sans;
+      // border: 1px solid #DDD;
+      background: transparent;
+      transition: .1s all linear;
+    }
+    
+    input:focus {
+      outline: none;
+    }
+  }
+}

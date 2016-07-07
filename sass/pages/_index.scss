@@ -1,0 +1,247 @@
+
+$navbar-height: 50px;
+
+.container {
+  width: 900px;
+  position: relative;
+}
+
+
+.IndexPage header {
+  padding: 50px 40px;
+  background: #19B5FE;
+  font-family: Avenir;
+  color: white;
+  
+  .button {
+    position: absolute;
+    top: 0px;
+    right: 0;
+    background: white;
+    color: #888; // #0bf;
+    font-size: 14px;
+    padding: 8px 13px;
+    font-weight: 600;
+    border-radius: 3px;
+  }
+  
+  h1 {
+    font-family: Avenir;
+    font-size: 50px;
+    font-weight: 600;
+  }
+  
+  h2 {
+    color: rgba(0,0,0,.5);
+    font-family: Avenir;
+    font-size: 24px;
+  }
+}
+
+.IndexPage .PageSearch {
+  box-shadow: 0 0 3px rgba(0,0,0,.1);
+  background: white;
+  border-bottom: 1px solid #EEE;
+  
+  form {
+    position: relative;
+
+    i {
+      position: absolute;
+      left: 0; // 10px;
+      line-height: 80px;
+      font-size: 30px;
+      color: #888;
+    }
+    
+    input {
+      border: 0;
+      padding: 0 20px;
+      padding-left: 45px;
+      width: 100%;
+      font-size: 20px;
+      line-height: 80px;
+      color: #444;
+      font-family: museo-sans;
+      // border: 1px solid #DDD;
+      background: transparent;
+      transition: .1s all linear;
+    }
+    
+    input:focus {
+      outline: none;
+    }
+  }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.PageResults {
+  padding: 20px 0;
+  background: #FAFAFA;
+  font-family: Avenir;
+
+  .explore {
+    padding: 10px 0;
+    
+    & > *, li {
+      display: inline-block;
+      line-height: 30px;
+    }
+    
+    label {
+      margin-right: 10px;
+      font-size: 17px;
+      color: #888;
+      font-weight: 400;
+    }
+    
+    li {
+      margin-right: 10px;
+      font-size: 17px;
+      font-weight: 500;
+      text-transform: uppercase;
+      
+      a {
+        text-decoration: none;
+        
+        &:hover {
+          border-bottom: 2px solid currentColor;
+        }
+      }
+    }
+    
+  }
+  
+  .ClubList > ul {
+    font-family: Avenir;
+    font-size: 16px;
+    transition: all .1s linear;
+    padding: 10px;
+    border-radius: 2px;
+    margin: 0 -10px 10px;
+    
+    & div { cursor: pointer; }
+    .right {
+      float: right;
+      padding: 10px;
+    }
+    
+    li {
+      display: inline-block;
+      vertical-align: middle;
+      cursor: pointer;
+    }
+    
+    .picture {
+      margin-right: 10px;
+      
+      img {
+        height: 50px;
+      }
+    }
+    
+    .name {
+      font-weight: bold;
+      margin-bottom: 2px;
+      font-size: 1.1em;
+      
+      .tag {
+        // font-weight: normal;
+        padding: 1px 4px;
+        font-size: 13px;
+        display: inline-block;
+        text-transform: uppercase;
+      }
+      
+      .tag-new {
+        margin-left: 3px;
+        background: #F5AB35;
+        color: white;
+      }
+    }
+    
+    .blurb {
+      width: 650px;
+      color: #888;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    
+    .size {
+      border: 2px solid #AAA;
+      border-radius: 2px;
+      padding: 0px 5px;
+      font-size: 12px;
+      font-weight: 500;
+      color: #888;
+      
+      i, span { vertical-align: middle; }
+      
+      i {
+        font-size: 15px;
+        // color: #FB8C00;
+      }
+    }
+    
+    &:hover {
+      background: fade-out(#fff,.1);
+    }
+    
+    .size {
+    }
+    
+    .tags {
+      li {
+        background: #F2784B;
+        color: white;
+        padding: 4px 6px;
+        font-size: 12px;
+        text-transform: uppercase;
+      }
+      a { color: white; }
+    }
+  }
+}
+
+[data-category-bg] {
+  &[data-category-bg=STEM] { color: #3498DB; }
+  &[data-category-bg=athletics] { color: #F22613; }
+  &[data-category-bg=arts] { color: #2ECC71; }
+  &[data-category-bg=politics] { color: #8E44AD; }
+  &[data-category-bg=activism] { color: #ffcc33; }
+  &[data-category-bg=business] { color: #95A5A6; }
+  &[data-category-bg=outreach] { color: #65C6BB; }
+  &[data-category-bg=greek] { color: #F9690E; }
+  &[data-category-bg=others] { color: #D2D7D3; }
+}
+
+
+.IndexPage footer {
+  padding: 50px 40px;
+  font-family: Avenir;
+  color: #888;
+  background: #EEE;
+  
+  ul {
+    display: table;
+  }
+  ul.right {
+    float: right;
+  }
+  
+  li {
+    list-style: none;
+    display: inline-block;
+    font-size: 15px;
+    margin-right: 20px;
+    
+    a {
+      color: #3498DB;
+    }
+  }
+}

@@ -1,0 +1,102 @@
+.ResultsList {
+  padding: 20px 0;
+  background: #FAFAFA;
+  font-family: Avenir;
+}
+
+.Club > ul {
+  font-family: Avenir;
+  font-size: 16px;
+  transition: all .1s linear;
+  padding: 10px;
+  border-radius: 2px;
+  margin: 0 -10px 10px;
+  
+  & div { cursor: pointer; }
+  .right {
+    float: right;
+    padding: 10px;
+  }
+  
+  li {
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+  }
+  
+  .picture {
+    margin-right: 10px;
+    
+    img {
+      height: 50px;
+    }
+  }
+  
+  .name {
+    font-weight: bold;
+    margin-bottom: 2px;
+    font-size: 1.1em;
+    
+    .tag {
+      // font-weight: normal;
+      padding: 1px 4px;
+      font-size: 13px;
+      margin-left: 5px;
+      display: inline-block;
+      text-transform: uppercase;
+    }
+    
+    .tag-new {
+      margin-left: 5px;
+      background: #F5AB35;
+      color: white;
+    }
+  }
+  
+  .blurb {
+    width: 650px;
+    color: #888;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .size {
+    border: 2px solid #AAA;
+    border-radius: 2px;
+    padding: 0px 5px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #888;
+    
+    i, span { vertical-align: middle; }
+    
+    i {
+      font-size: 15px;
+      // color: #FB8C00;
+    }
+  }
+  
+  &:hover {
+    background: fade-out(#fff,.1);
+  }
+  
+  .size {
+  }
+  
+  .tags {
+    li {
+      background: #F2784B;
+      color: white;
+      padding: 4px 6px;
+      font-size: 12px;
+      text-transform: uppercase;
+    }
+    a { color: white; }
+  }
+}
+
+.no-results {
+  padding: 0 0 300px 0;
+  color: rgba(0, 0, 0, 0.5);
+}

@@ -1,0 +1,68 @@
+$club-pic-height: 150px;
+$color1: #EEE;
+
+.ClubHeader {
+  background: #FFF;
+  padding: 0;
+  
+  .row-picture {
+    height: 200px;
+    width: 100%;
+    background: url(images/bg.jpg) no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-image: url(http://yaleentrepreneurship.com/wp-content/uploads/2013/12/tumblr_mw5mb2zlWY1r0cgg3o2_1280.jpg);
+  }
+    
+  header {
+    margin-bottom: 30px;
+    line-height: $club-pic-height+20;
+    position: relative;
+    background: $color1;
+    
+    .picture {
+      position: absolute;
+      left: 10px;
+      
+      line-height: $club-pic-height+20;
+      
+      img {
+        vertical-align: middle;
+        height: $club-pic-height;
+        width: $club-pic-height;
+      }
+    }
+    
+    .content {
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1.4;
+      padding-left: $club-pic-height+30;
+      padding-right: 10px;
+      font-size: 17px;
+      
+      .name {
+        font-size: 1.5em;
+        color: #222;
+      }
+      
+      .bio {
+        font-size: 1.1em;
+        color: #444;
+      }
+      
+      p {
+        margin-top: 5px;
+      }
+      
+      .tag {
+        text-transform: uppercase;
+        padding: 4px 5px;
+        font-size: .8em;
+        color: white;
+      }
+    }
+  }
+}

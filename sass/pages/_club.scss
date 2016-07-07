@@ -1,0 +1,298 @@
+
+.container {
+  width: 860px;
+  position: relative;
+}
+
+$color2: #FAFAFA;
+$color1: #EEE;
+
+body {
+  background: $color2; // FAFAFA;
+}
+
+.ClubPage nav {
+  background: #19B5FE;
+  font-family: Avenir;
+  $color: white;
+  $lh: 42px;
+
+  li {
+    list-style: none;
+    padding: 10px 0;
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: middle;
+    
+    &.title {
+      color: $color;
+      font-weight: 700;
+      font-size: 21px;
+      line-height: $lh;
+      margin-right: 20px;
+      
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+    }
+    
+    form {
+      position: relative;
+  
+      i {
+        position: absolute;
+        left: 12px;
+        line-height: $lh;
+        font-size: 22px;
+        color: fade-out($color, .3);
+      }
+      
+      input {
+        border: 0;
+        padding: 0 20px;
+        padding-left: 43px;
+        width: 500px;
+        font-size: 17px;
+        line-height: $lh;
+        font-weight: 400;
+        border-radius: 2px;
+        color: $color;
+        background: fade-out(white, .8);
+        font-family: museo-sans;
+        // border: 1px solid #DDD;
+        transition: .1s all linear;
+      }
+      
+      input:focus {
+        background: fade-out(white, .3);
+      }
+      
+      ::-webkit-input-placeholder { color: fade-out($color, .3); }
+      :-moz-placeholder { color: fade-out($color, .3); }
+      ::-moz-placeholder { color: fade-out($color, .3); }
+      :-ms-input-placeholder { color: fade-out($color, .3); }
+
+      input {
+        &:focus {
+          outline: 0;
+        }
+      }
+    }
+  }
+}
+
+$club-pic-height: 150px;
+
+
+.ClubPage main {
+  position: relative;
+  min-height: 300px;
+  padding: 20px 0 30px;
+  font-family: Avenir;
+  
+  .row-picture {
+    height: 200px;
+    width: 100%;
+    background: url(images/bg.jpg) no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-image: url(http://yaleentrepreneurship.com/wp-content/uploads/2013/12/tumblr_mw5mb2zlWY1r0cgg3o2_1280.jpg);
+  }
+  
+  header {
+    margin-bottom: 30px;
+    line-height: $club-pic-height+20;
+    position: relative;
+    background: $color1;
+    
+    .picture {
+      position: absolute;
+      left: 10px;
+      
+      line-height: $club-pic-height+20;
+      
+      img {
+        vertical-align: middle;
+        height: $club-pic-height;
+        width: $club-pic-height;
+      }
+    }
+    
+    .content {
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1.4;
+      padding-left: $club-pic-height+30;
+      padding-right: 10px;
+      font-size: 17px;
+      
+      .name {
+        font-size: 1.5em;
+        color: #222;
+      }
+      
+      .bio {
+        font-size: 1.1em;
+        color: #444;
+      }
+      
+      p {
+        margin-top: 5px;
+      }
+      
+      .tag {
+        text-transform: uppercase;
+        padding: 4px 5px;
+        font-size: .8em;
+        color: white;
+      }
+    }
+  }
+  
+  // .picture {
+  //   img {
+  //     height: 140px;
+  //     width: 140px;
+  //   }
+  // }
+  
+  .stats {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    
+    -ms-box-orient: horizontal;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+  }
+  
+  .about {
+    p {
+      font-size: 17px;
+    }
+  }
+
+}
+
+.ClubStats {
+  padding-right: 10px;
+  
+  & > li, & > ul > li {
+    list-style: none;
+    font-size: 16px;
+    $lh: 50px; // line-height
+    
+    & > * {
+      vertical-align: middle;
+      display: inline-block;
+      line-height: $lh;
+    }
+    
+    i {
+      margin-right: 7px;
+      vertical-align: middle;
+    }
+    
+    &.strip {
+      border-top: 1px solid #EEE;
+      padding-top: 10px;
+      margin-top: 10px;
+      height: 1px;
+    }
+    
+    label {
+      font-weight: 400;
+      margin: 0;
+    }
+    
+    .answer {
+      float: right;
+    }
+  }
+}
+
+.Explore {
+  padding: 10px 0;
+  margin-top: 20px;
+  // background: #FFF;
+  font-family: Avenir;
+
+  .explore {
+    padding: 10px 0;
+    
+    & > *, li {
+      display: inline-block;
+      line-height: 30px;
+    }
+    
+    label {
+      margin-right: 10px;
+      font-size: 17px;
+      color: #888;
+      font-weight: 400;
+    }
+    
+    li {
+      margin-right: 10px;
+      font-size: 17px;
+      font-weight: 500;
+      text-transform: uppercase;
+      
+      a {
+        text-decoration: none;
+        
+        &:hover {
+          border-bottom: 2px solid currentColor;
+        }
+      }
+    }
+    
+  }
+}
+
+
+.ClubPage footer {
+  padding: 50px 40px;
+  font-family: Avenir;
+  color: #888;
+  background: #EEE;
+  
+  ul {
+    display: table;
+  }
+  ul.right {
+    float: right;
+  }
+  
+  li {
+    list-style: none;
+    display: inline-block;
+    font-size: 15px;
+    margin-right: 20px;
+    
+    a {
+      color: #3498DB;
+    }
+  }
+}
+
+
+.tag-background {
+  &[data-category=STEM] { background: #3498DB; }
+  &[data-category=athletics] { background: #F22613; }
+  &[data-category=arts] { background: #2ECC71; }
+  &[data-category=politics] { background: #8E44AD; }
+  &[data-category=activism] { background: #ffcc33; }
+  &[data-category=business] { background: #95A5A6; }
+  &[data-category=outreach] { background: #65C6BB; }
+  &[data-category=greek] { background: #F9690E; }
+  &[data-category=others] { background: #D2D7D3; }
+}
+
