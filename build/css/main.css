@@ -1,0 +1,649 @@
+.container {
+  width: 860px;
+  position: relative; }
+
+body {
+  background: #FAFAFA; }
+
+.ClubPage nav {
+  background: #19B5FE;
+  font-family: Avenir; }
+  .ClubPage nav li {
+    list-style: none;
+    padding: 10px 0;
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: middle; }
+    .ClubPage nav li.title {
+      color: white;
+      font-weight: 700;
+      font-size: 21px;
+      line-height: 42px;
+      margin-right: 20px; }
+      .ClubPage nav li.title a {
+        color: inherit;
+        text-decoration: none; }
+    .ClubPage nav li form {
+      position: relative; }
+      .ClubPage nav li form i {
+        position: absolute;
+        left: 12px;
+        line-height: 42px;
+        font-size: 22px;
+        color: rgba(255, 255, 255, 0.7); }
+      .ClubPage nav li form input {
+        border: 0;
+        padding: 0 20px;
+        padding-left: 43px;
+        width: 500px;
+        font-size: 17px;
+        line-height: 42px;
+        font-weight: 400;
+        border-radius: 2px;
+        color: white;
+        background: rgba(255, 255, 255, 0.2);
+        font-family: museo-sans;
+        transition: .1s all linear; }
+      .ClubPage nav li form input:focus {
+        background: rgba(255, 255, 255, 0.7); }
+      .ClubPage nav li form ::-webkit-input-placeholder {
+        color: rgba(255, 255, 255, 0.7); }
+      .ClubPage nav li form :-moz-placeholder {
+        color: rgba(255, 255, 255, 0.7); }
+      .ClubPage nav li form ::-moz-placeholder {
+        color: rgba(255, 255, 255, 0.7); }
+      .ClubPage nav li form :-ms-input-placeholder {
+        color: rgba(255, 255, 255, 0.7); }
+      .ClubPage nav li form input:focus {
+        outline: 0; }
+
+.ClubPage main {
+  position: relative;
+  min-height: 300px;
+  padding: 20px 0 30px;
+  font-family: Avenir; }
+  .ClubPage main .row-picture {
+    height: 200px;
+    width: 100%;
+    background: url(images/bg.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-image: url(http://yaleentrepreneurship.com/wp-content/uploads/2013/12/tumblr_mw5mb2zlWY1r0cgg3o2_1280.jpg); }
+  .ClubPage main header {
+    margin-bottom: 30px;
+    line-height: 170px;
+    position: relative;
+    background: #EEE; }
+    .ClubPage main header .picture {
+      position: absolute;
+      left: 10px;
+      line-height: 170px; }
+      .ClubPage main header .picture img {
+        vertical-align: middle;
+        height: 150px;
+        width: 150px; }
+    .ClubPage main header .content {
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1.4;
+      padding-left: 180px;
+      padding-right: 10px;
+      font-size: 17px; }
+      .ClubPage main header .content .name {
+        font-size: 1.5em;
+        color: #222; }
+      .ClubPage main header .content .bio {
+        font-size: 1.1em;
+        color: #444; }
+      .ClubPage main header .content p {
+        margin-top: 5px; }
+      .ClubPage main header .content .tag {
+        text-transform: uppercase;
+        padding: 4px 5px;
+        font-size: .8em;
+        color: white; }
+  .ClubPage main .stats {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    -ms-box-orient: horizontal;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex; }
+  .ClubPage main .about p {
+    font-size: 17px; }
+
+.ClubStats {
+  padding-right: 10px; }
+  .ClubStats > li, .ClubStats > ul > li {
+    list-style: none;
+    font-size: 16px; }
+    .ClubStats > li > *, .ClubStats > ul > li > * {
+      vertical-align: middle;
+      display: inline-block;
+      line-height: 50px; }
+    .ClubStats > li i, .ClubStats > ul > li i {
+      margin-right: 7px;
+      vertical-align: middle; }
+    .ClubStats > li.strip, .ClubStats > ul > li.strip {
+      border-top: 1px solid #EEE;
+      padding-top: 10px;
+      margin-top: 10px;
+      height: 1px; }
+    .ClubStats > li label, .ClubStats > ul > li label {
+      font-weight: 400;
+      margin: 0; }
+    .ClubStats > li .answer, .ClubStats > ul > li .answer {
+      float: right; }
+
+.Explore {
+  padding: 10px 0;
+  margin-top: 20px;
+  font-family: Avenir; }
+  .Explore .explore {
+    padding: 10px 0; }
+    .Explore .explore > *, .Explore .explore li {
+      display: inline-block;
+      line-height: 30px; }
+    .Explore .explore label {
+      margin-right: 10px;
+      font-size: 17px;
+      color: #888;
+      font-weight: 400; }
+    .Explore .explore li {
+      margin-right: 10px;
+      font-size: 17px;
+      font-weight: 500;
+      text-transform: uppercase; }
+      .Explore .explore li a {
+        text-decoration: none; }
+        .Explore .explore li a:hover {
+          border-bottom: 2px solid currentColor; }
+
+.ClubPage footer {
+  padding: 50px 40px;
+  font-family: Avenir;
+  color: #888;
+  background: #EEE; }
+  .ClubPage footer ul {
+    display: table; }
+  .ClubPage footer ul.right {
+    float: right; }
+  .ClubPage footer li {
+    list-style: none;
+    display: inline-block;
+    font-size: 15px;
+    margin-right: 20px; }
+    .ClubPage footer li a {
+      color: #3498DB; }
+
+.tag-background[data-category=STEM] {
+  background: #3498DB; }
+
+.tag-background[data-category=athletics] {
+  background: #F22613; }
+
+.tag-background[data-category=arts] {
+  background: #2ECC71; }
+
+.tag-background[data-category=politics] {
+  background: #8E44AD; }
+
+.tag-background[data-category=activism] {
+  background: #ffcc33; }
+
+.tag-background[data-category=business] {
+  background: #95A5A6; }
+
+.tag-background[data-category=outreach] {
+  background: #65C6BB; }
+
+.tag-background[data-category=greek] {
+  background: #F9690E; }
+
+.tag-background[data-category=others] {
+  background: #D2D7D3; }
+
+.EditorFormPage .mdl-list__item-secondary-action {
+  padding-left: 20px; }
+  .EditorFormPage .mdl-list__item-secondary-action .mdl-js-textfield, .EditorFormPage .mdl-list__item-secondary-action .getmdl-select {
+    width: 500px !important; }
+  .EditorFormPage .mdl-list__item-secondary-action > .big {
+    width: 500px !important; }
+
+.EditorFormPage #images-sec img {
+  height: 100px; }
+
+.EditorFormPage form {
+  padding-bottom: 50px; }
+
+.EditorFormPage .form-buttons {
+  margin-top: 30px; }
+  .EditorFormPage .form-buttons .mdl-button--delete {
+    color: salmon; }
+  .EditorFormPage .form-buttons .right {
+    float: right; }
+
+.EditorFormPage textarea {
+  overflow: hidden;
+  min-height: 30px;
+  padding: 5px;
+  line-height: 1.4;
+  border: 1px solid #DDD; }
+
+.EditorFormPage .mdl-list__item--three-line {
+  min-height: 88px;
+  height: auto; }
+
+.mdl-list__item.mdl-list__item--three-line {
+  overflow: initial; }
+
+.getmdl-select .mdl-icon-toggle__label {
+  float: right;
+  margin-top: -30px;
+  color: rgba(0, 0, 0, 0.4); }
+
+.getmdl-select.is-focused .mdl-icon-toggle__label {
+  color: #3f51b5; }
+
+.getmdl-select .mdl-menu__container {
+  width: 100% !important; }
+
+.getmdl-select .mdl-menu__container .mdl-menu .mdl-menu__item {
+  font-size: 16px;
+  font-family: Roboto; }
+
+.getmdl-select ::-webkit-input-placeholder {
+  font-family: Roboto;
+  color: rgba(0, 0, 0, 0.26);
+  letter-spacing: .04em; }
+
+.getmdl-select :-moz-placeholder {
+  font-family: Roboto;
+  color: rgba(0, 0, 0, 0.26);
+  letter-spacing: .04em; }
+
+.getmdl-select ::-moz-placeholder {
+  font-family: Roboto;
+  color: rgba(0, 0, 0, 0.26);
+  letter-spacing: .04em; }
+
+.getmdl-select :-ms-input-placeholder {
+  font-family: Roboto;
+  color: rgba(0, 0, 0, 0.26);
+  letter-spacing: .04em; }
+
+.getmdl-select__fullwidth .mdl-menu {
+  width: 100%; }
+
+.EditorPage table {
+  max-width: 600px; }
+  .EditorPage table .visible {
+    color: #8bc34a; }
+
+.IndexHeader {
+  padding: 50px 40px;
+  background: #19B5FE;
+  font-family: Avenir;
+  color: white; }
+  .IndexHeader .container {
+    width: 900px;
+    position: relative; }
+  .IndexHeader h1 {
+    font-family: Avenir;
+    font-size: 50px;
+    font-weight: 600; }
+  .IndexHeader h2 {
+    color: rgba(0, 0, 0, 0.5);
+    font-family: Avenir;
+    font-size: 24px; }
+
+.container {
+  padding: 0; }
+
+.Query {
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  background: white;
+  border-bottom: 1px solid #EEE; }
+  .Query form {
+    position: relative; }
+    .Query form i {
+      position: absolute;
+      left: 0;
+      line-height: 80px;
+      font-size: 30px;
+      color: #888; }
+    .Query form input {
+      border: 0;
+      padding: 0 20px;
+      padding-left: 45px;
+      width: 100%;
+      font-size: 20px;
+      line-height: 80px;
+      color: #444;
+      font-family: museo-sans;
+      background: transparent;
+      transition: .1s all linear; }
+    .Query form input:focus {
+      outline: none; }
+
+.ResultsList {
+  padding: 20px 0;
+  background: #FAFAFA;
+  font-family: Avenir; }
+
+.Club > ul {
+  font-family: Avenir;
+  font-size: 16px;
+  transition: all .1s linear;
+  padding: 10px;
+  border-radius: 2px;
+  margin: 0 -10px 10px; }
+  .Club > ul div {
+    cursor: pointer; }
+  .Club > ul .right {
+    float: right;
+    padding: 10px; }
+  .Club > ul li {
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer; }
+  .Club > ul .picture {
+    margin-right: 10px; }
+    .Club > ul .picture img {
+      height: 50px; }
+  .Club > ul .name {
+    font-weight: bold;
+    margin-bottom: 2px;
+    font-size: 1.1em; }
+    .Club > ul .name .tag {
+      padding: 1px 4px;
+      font-size: 13px;
+      margin-left: 5px;
+      display: inline-block;
+      text-transform: uppercase; }
+    .Club > ul .name .tag-new {
+      margin-left: 5px;
+      background: #F5AB35;
+      color: white; }
+  .Club > ul .blurb {
+    width: 650px;
+    color: #888;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+  .Club > ul .size {
+    border: 2px solid #AAA;
+    border-radius: 2px;
+    padding: 0px 5px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #888; }
+    .Club > ul .size i, .Club > ul .size span {
+      vertical-align: middle; }
+    .Club > ul .size i {
+      font-size: 15px; }
+  .Club > ul:hover {
+    background: rgba(255, 255, 255, 0.9); }
+  .Club > ul .tags li {
+    background: #F2784B;
+    color: white;
+    padding: 4px 6px;
+    font-size: 12px;
+    text-transform: uppercase; }
+  .Club > ul .tags a {
+    color: white; }
+
+.no-results {
+  padding: 0 0 300px 0;
+  color: rgba(0, 0, 0, 0.5); }
+
+.Navbar {
+  background: #19B5FE;
+  font-family: Avenir; }
+  .Navbar li {
+    list-style: none;
+    padding: 10px 0;
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: middle; }
+    .Navbar li.title {
+      color: white;
+      font-weight: 700;
+      font-size: 21px;
+      line-height: 42px;
+      margin-right: 20px; }
+      .Navbar li.title a {
+        color: inherit;
+        text-decoration: none; }
+    .Navbar li form {
+      position: relative; }
+      .Navbar li form i {
+        position: absolute;
+        left: 12px;
+        line-height: 42px;
+        font-size: 22px;
+        color: rgba(255, 255, 255, 0.7); }
+      .Navbar li form input {
+        border: 0;
+        padding: 0 20px;
+        padding-left: 43px;
+        width: 500px;
+        font-size: 17px;
+        line-height: 42px;
+        font-weight: 400;
+        border-radius: 2px;
+        color: white;
+        background: rgba(255, 255, 255, 0.2);
+        font-family: museo-sans;
+        transition: .1s all linear; }
+      .Navbar li form input:focus {
+        background: rgba(255, 255, 255, 0.7); }
+      .Navbar li form ::-webkit-input-placeholder {
+        color: rgba(255, 255, 255, 0.7); }
+      .Navbar li form :-moz-placeholder {
+        color: rgba(255, 255, 255, 0.7); }
+      .Navbar li form ::-moz-placeholder {
+        color: rgba(255, 255, 255, 0.7); }
+      .Navbar li form :-ms-input-placeholder {
+        color: rgba(255, 255, 255, 0.7); }
+      .Navbar li form input:focus {
+        outline: 0; }
+
+.ClubInfo {
+  position: relative;
+  min-height: 300px;
+  padding: 20px 0 30px;
+  font-family: Avenir; }
+  .ClubInfo .container {
+    width: 860px;
+    padding: 0;
+    position: relative; }
+
+.ClubHeader {
+  background: #FFF;
+  padding: 0; }
+  .ClubHeader .row-picture {
+    height: 200px;
+    width: 100%;
+    background: url(images/bg.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-image: url(http://yaleentrepreneurship.com/wp-content/uploads/2013/12/tumblr_mw5mb2zlWY1r0cgg3o2_1280.jpg); }
+  .ClubHeader header {
+    margin-bottom: 30px;
+    line-height: 170px;
+    position: relative;
+    background: #EEE; }
+    .ClubHeader header .picture {
+      position: absolute;
+      left: 10px;
+      line-height: 170px; }
+      .ClubHeader header .picture img {
+        vertical-align: middle;
+        height: 150px;
+        width: 150px; }
+    .ClubHeader header .content {
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1.4;
+      padding-left: 180px;
+      padding-right: 10px;
+      font-size: 17px; }
+      .ClubHeader header .content .name {
+        font-size: 1.5em;
+        color: #222; }
+      .ClubHeader header .content .bio {
+        font-size: 1.1em;
+        color: #444; }
+      .ClubHeader header .content p {
+        margin-top: 5px; }
+      .ClubHeader header .content .tag {
+        text-transform: uppercase;
+        padding: 4px 5px;
+        font-size: .8em;
+        color: white; }
+
+.Content {
+  padding: 0; }
+  .Content .About p {
+    font-size: 17px; }
+
+.ClubStats {
+  padding-right: 10px; }
+  .ClubStats > li, .ClubStats > ul > li {
+    list-style: none;
+    font-size: 16px; }
+    .ClubStats > li > *, .ClubStats > ul > li > * {
+      vertical-align: middle;
+      display: inline-block;
+      line-height: 50px; }
+    .ClubStats > li i, .ClubStats > ul > li i {
+      margin-right: 7px;
+      vertical-align: middle; }
+    .ClubStats > li.strip, .ClubStats > ul > li.strip {
+      border-top: 1px solid #EEE;
+      padding-top: 10px;
+      margin-top: 10px;
+      height: 1px; }
+    .ClubStats > li label, .ClubStats > ul > li label {
+      font-weight: 400;
+      margin: 0; }
+    .ClubStats > li .answer, .ClubStats > ul > li .answer {
+      float: right; }
+      .ClubStats > li .answer span, .ClubStats > li .answer i, .ClubStats > ul > li .answer span, .ClubStats > ul > li .answer i {
+        vertical-align: middle; }
+
+.ExploreBar {
+  padding: 0;
+  margin-top: 20px;
+  font-family: Avenir;
+  padding: 10px 0; }
+  .ExploreBar > *, .ExploreBar li {
+    display: inline-block;
+    line-height: 30px; }
+  .ExploreBar label {
+    margin-right: 10px;
+    font-size: 17px;
+    color: #888;
+    font-weight: 400; }
+  .ExploreBar li {
+    margin-right: 10px;
+    font-size: 17px;
+    font-weight: 500;
+    text-transform: uppercase; }
+    .ExploreBar li a {
+      text-decoration: none; }
+      .ExploreBar li a:hover {
+        border-bottom: 2px solid currentColor; }
+
+.tag-background[data-category=STEM] {
+  background: #3498DB; }
+
+.tag-background[data-category=athletics] {
+  background: #F22613; }
+
+.tag-background[data-category=arts] {
+  background: #2ECC71; }
+
+.tag-background[data-category=politics] {
+  background: #8E44AD; }
+
+.tag-background[data-category=activism] {
+  background: #ffcc33; }
+
+.tag-background[data-category=business] {
+  background: #95A5A6; }
+
+.tag-background[data-category=outreach] {
+  background: #65C6BB; }
+
+.tag-background[data-category=greek] {
+  background: #F9690E; }
+
+.tag-background[data-category=others] {
+  background: #D2D7D3; }
+
+.Footer {
+  padding: 50px 40px;
+  font-family: Avenir;
+  color: #888;
+  background: #EEE; }
+  .Footer ul {
+    display: table; }
+  .Footer ul.right {
+    float: right; }
+  .Footer li {
+    list-style: none;
+    display: inline-block;
+    font-size: 15px;
+    margin-right: 20px; }
+    .Footer li a {
+      color: #3498DB; }
+
+.container {
+  width: 860px;
+  position: relative; }
+
+.main {
+  width: 960px;
+  margin: 80px auto;
+  background: #FFFFFF; }
+
+ul {
+  list-style: none;
+  padding: 0; }
+
+[data-category-bg][data-category-bg=STEM] {
+  color: #3498DB; }
+
+[data-category-bg][data-category-bg=athletics] {
+  color: #F22613; }
+
+[data-category-bg][data-category-bg=arts] {
+  color: #2ECC71; }
+
+[data-category-bg][data-category-bg=politics] {
+  color: #8E44AD; }
+
+[data-category-bg][data-category-bg=activism] {
+  color: #ffcc33; }
+
+[data-category-bg][data-category-bg=business] {
+  color: #95A5A6; }
+
+[data-category-bg][data-category-bg=outreach] {
+  color: #65C6BB; }
+
+[data-category-bg][data-category-bg=greek] {
+  color: #F9690E; }
+
+[data-category-bg][data-category-bg=others] {
+  color: #D2D7D3; }
