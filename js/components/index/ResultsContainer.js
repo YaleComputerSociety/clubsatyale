@@ -1,4 +1,5 @@
 var React = require('react');
+var _ = require('lodash');
 var $ = require('jquery');
 var Results = require('./Results');
 var PropTypes = React.PropTypes;
@@ -102,7 +103,7 @@ var fake = [
   }
 ];
 
-var fake = clubData;
+fake = clubData && _.values(clubData) || fake;
 
 var ResultsContainer = React.createClass({
   getInitialState: function() {
