@@ -52114,7 +52114,7 @@
 	                  { className: 'answer' },
 	                  React.createElement(
 	                    'a',
-	                    { href: 'http://facebook.com/{ club.facebook }' },
+	                    { href: "http://facebook.com/" + club.facebook },
 	                    'facebook.com/',
 	                    club.facebook
 	                  )

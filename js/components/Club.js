@@ -136,7 +136,7 @@ class Content extends React.Component {
                 <i className="material-icons">launch</i>
                 <label>Website</label>
                 <div className="answer">
-                  <a href="#">{ club.website }</a>
+                  <a href={ club.website }>{ club.website }</a>
                 </div>
               </li> }
               { club.facebook &&
@@ -144,7 +144,7 @@ class Content extends React.Component {
                 <i className="material-icons">share</i>
                 <label>Social</label>
                 <div className="answer">
-                  <a href="http://facebook.com/{ club.facebook }">facebook.com/{ club.facebook }</a>
+                  <a href={"http://facebook.com/"+club.facebook }>facebook.com/{ club.facebook }</a>
                 </div>
               </li> }
               { club.birth &&
