@@ -1,1 +1,2 @@
-st -i index.html -u clubsatyale
+# st -i index.html -u clubsatyale
+node server.js

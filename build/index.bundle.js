@@ -25999,7 +25999,7 @@
 	var PropTypes = React.PropTypes;
 
 	var fake = [{
-	  "icon": "/static/img/yale_data_science.png",
+	  "picture": "/static/img/yale_data_science.png",
 	  "name": " Yale Data Science",
 	  "bio": "A group of Yale undergraduates interested in data science and machine learning",
 	  "size": "25",
@@ -26007,7 +26007,7 @@
 	  "tag": "Research Group",
 	  "time": 5
 	}, {
-	  "icon": "/static/img/whaling_crew.png",
+	  "picture": "/static/img/whaling_crew.png",
 	  "name": "Yale Science Magazine",
 	  "bio": "Magazine about STEM issues",
 	  "category": ["arts", "STEM"],
@@ -26015,7 +26015,7 @@
 	  "size": 25,
 	  "time": 4
 	}, {
-	  "icon": "/static/img/whaling_crew.png",
+	  "picture": "/static/img/whaling_crew.png",
 	  "name": " Whaling Crew",
 	  "bio": "A unified, organized student group dedicated to yelling too loud and heckling too obnoxiously at Bulldog athletic events",
 	  "category": "athletics",
@@ -26023,7 +26023,7 @@
 	  "size": 25,
 	  "time": 4
 	}, {
-	  "icon": "/static/img/federalist_party.png",
+	  "picture": "/static/img/federalist_party.png",
 	  "name": "Federalist Party",
 	  "bio": "A conservative debating society/member of the Yale Political Union - we believe in the values espoused in the Federalist Papers",
 	  "category": "politics",
@@ -26031,7 +26031,7 @@
 	  "size": 50,
 	  "time": 7
 	}, {
-	  "icon": "/static/img/just_add_water.png",
+	  "picture": "/static/img/just_add_water.png",
 	  "name": "Just Add Water",
 	  "bio": "Yale's funniest improvisational comedy troupe - we do long-form, short-form, AND musical improv",
 	  "category": "arts",
@@ -26039,7 +26039,7 @@
 	  "size": 25,
 	  "time": 6
 	}, {
-	  "icon": "/static/img/aast.jpg",
+	  "picture": "/static/img/aast.jpg",
 	  "name": "Asian American Studies Task Force",
 	  "bio": "Fighting for the expansion of Asian American studies at Yale",
 	  "size": 15,
@@ -26047,7 +26047,7 @@
 	  "category": "activism",
 	  "time": 5
 	}, {
-	  "icon": "/static/img/ygm.png",
+	  "picture": "/static/img/ygm.png",
 	  "name": "Yale Guild of Makers",
 	  "bio": "Uniting makers across Yale",
 	  "category": "STEM",
@@ -26056,7 +26056,7 @@
 	  "size": 25,
 	  "time": 5
 	}, {
-	  "icon": "/static/img/ygm.png",
+	  "picture": "/static/img/ygm.png",
 	  "name": "The Yale Spizzwinks(?)",
 	  "bio": "",
 	  "category": "arts",
@@ -26065,7 +26065,7 @@
 	  "size": 35,
 	  "time": 5
 	}, {
-	  "icon": "/static/img/ygm.png",
+	  "picture": "/static/img/ygm.png",
 	  "name": "Society of Orpheus and Bacchus",
 	  "bio": "",
 	  "category": "arts",
@@ -26074,7 +26074,7 @@
 	  "size": 25,
 	  "time": 5
 	}, {
-	  "icon": "/static/img/ygm.png",
+	  "picture": "/static/img/ygm.png",
 	  "name": "The Duke's Men of Yale",
 	  "bio": "",
 	  "category": "arts",
@@ -26083,7 +26083,7 @@
 	  "size": 25,
 	  "time": 5
 	}, {
-	  "icon": "/static/img/ygm.png",
+	  "picture": "/static/img/ygm.png",
 	  "name": "Lux et Improvitas",
 	  "bio": "",
 	  "category": "arts",
@@ -51642,16 +51642,20 @@
 	          );
 	        }
 
+	        var gotoClubk = function gotoClubk() {
+	          window.location = club.slug;
+	        };
+
 	        return React.createElement(
 	          'div',
-	          { className: 'Club' },
+	          { className: 'Club', onClick: gotoClubk },
 	          React.createElement(
 	            'ul',
 	            null,
 	            React.createElement(
 	              'li',
 	              { className: 'picture' },
-	              React.createElement('img', { src: club.icon })
+	              React.createElement('img', { src: club.picture })
 	            ),
 	            React.createElement(
 	              'li',
@@ -51867,7 +51871,6 @@
 	var $ = __webpack_require__(236);
 	var Footer = __webpack_require__(242);
 	var ExploreBar = __webpack_require__(238);
-	var ClubInfo = __webpack_require__(244);
 
 	(function (jQuery) {
 	  jQuery.eventEmitter = {
@@ -52172,7 +52175,7 @@
 	      return React.createElement(
 	        'div',
 	        { className: 'ClubHeader' },
-	        React.createElement('div', { className: 'row-picture' }),
+	        React.createElement('div', { className: 'row-picture', style: { backgroundImage: "url(" + this.props.club.cover + ")" } }),
 	        React.createElement(
 	          'header',
 	          null,
@@ -52246,7 +52249,7 @@
 	          { className: 'title' },
 	          React.createElement(
 	            'a',
-	            { href: '/' },
+	            { href: '/clubsatyale' },
 	            'Clubs At Yale'
 	          )
 	        ),
@@ -52269,14 +52272,6 @@
 	  }
 	});
 
-	function getClubData(slug, callback) {
-	  $.getJSON('/api/clubs/all?slug=' + slug, function (data) {
-	    callback(data);
-	  }).fail(function (data) {
-	    callback(null);
-	  });
-	}
-
 	var ClubPage = function (_React$Component3) {
 	  _inherits(ClubPage, _React$Component3);
 
@@ -52292,11 +52287,12 @@
 	  _createClass(ClubPage, [{
 	    key: 'componentDidMount',
 	    value: function componentDidMount() {
-	      var _this4 = this;
-
-	      getClubData(this.props.params.id, function (club) {
-	        club ? _this4.setState({ club: club }) : _this4.setState({ is404: true });
-	      });
+	      var slug = this.props.params.id;
+	      if (clubData[slug]) {
+	        this.setState({ club: clubData[slug] });
+	      } else {
+	        this.setState({ is404: true });
+	      }
 	    }
 	  }, {
 	    key: 'render',
@@ -52339,386 +52335,6 @@
 	}(React.Component);
 
 	module.exports = ClubPage;
-
-/***/ },
-/* 244 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var React = __webpack_require__(2);
-	var PropTypes = React.PropTypes;
-	var ClubHeader = __webpack_require__(245);
-	var Content = __webpack_require__(246);
-	var ExploreBar = __webpack_require__(238);
-
-	var clubs = [{
-	  "picture": "/static/img/yale_data_science.png",
-	  "name": " Yale Data Science",
-	  "bio": "A group of Yale undergraduates interested in data science and machine learning",
-	  "size": "25",
-	  "tag": "Research Group",
-	  "category": "STEM",
-	  "time": 5
-	}, {
-	  "picture": "/static/img/whaling_crew.png",
-	  "name": " Whaling Crew",
-	  "bio": "A unified, organized student group dedicated to yelling too loud and heckling too obnoxiously at Bulldog athletic events",
-	  "category": "athletics",
-	  "tag": "athletics",
-	  "size": 25,
-	  "time": 4
-	}, {
-	  "picture": "/static/img/federalist_party.png",
-	  "name": "Federalist Party",
-	  "bio": "A conservative debating society/member of the Yale Political Union - we believe in the values espoused in the Federalist Papers",
-	  "category": "politics",
-	  "tag": "political party",
-	  "size": 50,
-	  "time": 7
-	}, {
-	  "picture": "/static/img/just_add_water.png",
-	  "name": "Just Add Water",
-	  "bio": "Yale's funniest improvisational comedy troupe - we do long-form, short-form, AND musical improv",
-	  "category": "arts",
-	  "tag": "Improv Group",
-	  "size": 25,
-	  "time": 6
-	}, {
-	  "picture": "/static/img/aast.jpg",
-	  "name": "Asian American Studies Task Force",
-	  "bio": "Fighting for the expansion of Asian American studies at Yale",
-	  "size": 15,
-	  "tag": "Activism",
-	  "category": "activism",
-	  "time": 5
-	}, {
-	  "picture": "/static/img/ygm.png",
-	  "name": "Yale Guild of Makers",
-	  "bio": "Uniting makers across Yale",
-	  "category": "STEM",
-	  "tag": "STEM club",
-	  "new": true,
-	  "size": 25,
-	  "time": 5
-	}, {
-	  "picture": "https://ecd-f03lipe.c9users.io/static/img/yhack.png",
-	  "name": "YHack",
-	  "cover": "http://yaleentrepreneurship.com/wp-content/uploads/2013/12/tumblr_mw5mb2zlWY1r0cgg3o2_1280.jpg",
-	  "bio": "Creating an extracurricular directory for students",
-	  "category": "STEM",
-	  "tag": "STEM club",
-	  "new": true,
-	  "size": 25,
-	  "time": 5,
-	  "website": "yhack.org"
-	}];
-
-	var club = clubs[Math.floor(Math.random() * clubs.length)];
-
-	var ClubInfo = React.createClass({
-	  displayName: 'ClubInfo',
-
-	  render: function render() {
-	    return React.createElement(
-	      'div',
-	      { className: 'ClubInfo' },
-	      React.createElement(
-	        'div',
-	        { className: 'container' },
-	        React.createElement(ClubHeader, { club: club }),
-	        React.createElement(Content, { club: club }),
-	        React.createElement(ExploreBar, null)
-	      )
-	    );
-	  }
-	});
-
-	ClubInfo.propTypes = {
-	  /*propName: PropTypes.dataType.isRequired;*/
-	};
-
-	module.exports = ClubInfo;
-
-/***/ },
-/* 245 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	var React = __webpack_require__(2);
-	var PropTypes = React.PropTypes;
-
-	var ClubHeader = React.createClass({
-	  displayName: "ClubHeader",
-
-	  render: function render() {
-	    return React.createElement(
-	      "div",
-	      { className: "ClubHeader" },
-	      React.createElement("div", { className: "row-picture" }),
-	      React.createElement(
-	        "header",
-	        null,
-	        React.createElement(
-	          "div",
-	          { className: "picture" },
-	          React.createElement("img", { src: this.props.club.picture })
-	        ),
-	        React.createElement(
-	          "div",
-	          { className: "content" },
-	          React.createElement(
-	            "div",
-	            { className: "name" },
-	            this.props.club.name
-	          ),
-	          React.createElement(
-	            "div",
-	            { className: "bio" },
-	            this.props.club.bio
-	          ),
-	          React.createElement(
-	            "p",
-	            null,
-	            React.createElement(
-	              "span",
-	              { className: "tag tag-background", "data-category": this.props.club.category },
-	              this.props.club.tag
-	            )
-	          )
-	        )
-	      )
-	    );
-	  }
-	});
-
-	ClubHeader.propTypes = {
-	  /*propName: PropTypes.dataType.isRequired;*/
-	};
-
-	module.exports = ClubHeader;
-
-/***/ },
-/* 246 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var React = __webpack_require__(2);
-	var PropTypes = React.PropTypes;
-	var ClubStats = __webpack_require__(247);
-
-	var About = React.createClass({
-	  displayName: 'About',
-
-	  render: function render() {
-	    return React.createElement(
-	      'div',
-	      { className: 'About' },
-	      React.createElement(
-	        'p',
-	        null,
-	        'We are an international hackathon hosted by and held at Yale, bringing 1500 like-minded hackers and creatives from all over the world.'
-	      ),
-	      React.createElement(
-	        'p',
-	        null,
-	        'YHack is a festival of innovation, an arena of tech warriors, and astage to present your big idea. Jam packed into 36 hours is a rainbow ofevents (talks, food, rap battles) that go on through the night while caffeinated teams hack on a Python app or program arduino-driven pumpkinsto battle over Twitch.'
-	      ),
-	      React.createElement(
-	        'p',
-	        null,
-	        'Hack at YHack because you can get more done in a weekend of hacking than weeks of working at an office.'
-	      )
-	    );
-	  }
-	});
-
-	var Content = React.createClass({
-	  displayName: 'Content',
-
-	  render: function render() {
-	    return React.createElement(
-	      'div',
-	      { className: 'Content' },
-	      React.createElement(
-	        'div',
-	        { className: 'row' },
-	        React.createElement(
-	          'div',
-	          { className: 'col-md-5' },
-	          React.createElement(ClubStats, null)
-	        ),
-	        React.createElement(
-	          'div',
-	          { className: 'col-md-7' },
-	          React.createElement(About, null)
-	        )
-	      )
-	    );
-	  }
-	});
-
-	Content.propTypes = {
-	  /*propName: PropTypes.dataType.isRequired;*/
-	};
-
-	module.exports = Content;
-
-/***/ },
-/* 247 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	var React = __webpack_require__(2);
-	var PropTypes = React.PropTypes;
-
-	var ClubStats = React.createClass({
-	  displayName: "ClubStats",
-
-	  render: function render() {
-	    return React.createElement(
-	      "div",
-	      { className: "ClubStats" },
-	      React.createElement(
-	        "li",
-	        null,
-	        React.createElement(
-	          "i",
-	          { className: "material-icons" },
-	          "group"
-	        ),
-	        React.createElement(
-	          "label",
-	          null,
-	          "Size"
-	        ),
-	        React.createElement(
-	          "div",
-	          { className: "answer" },
-	          "30-40 members"
-	        )
-	      ),
-	      React.createElement(
-	        "li",
-	        null,
-	        React.createElement(
-	          "i",
-	          { className: "material-icons" },
-	          "beach_access"
-	        ),
-	        React.createElement(
-	          "label",
-	          null,
-	          "Commitment"
-	        ),
-	        React.createElement(
-	          "div",
-	          { className: "answer" },
-	          "20 hs/month"
-	        )
-	      ),
-	      React.createElement(
-	        "li",
-	        null,
-	        React.createElement(
-	          "i",
-	          { className: "material-icons" },
-	          "fitness_center"
-	        ),
-	        React.createElement(
-	          "label",
-	          null,
-	          "Tryouts required"
-	        ),
-	        React.createElement(
-	          "div",
-	          { className: "answer" },
-	          React.createElement(
-	            "i",
-	            { className: "material-icons" },
-	            "done"
-	          ),
-	          "YES"
-	        )
-	      ),
-	      React.createElement("li", { className: "strip" }),
-	      React.createElement(
-	        "li",
-	        null,
-	        React.createElement(
-	          "i",
-	          { className: "material-icons" },
-	          "launch"
-	        ),
-	        React.createElement(
-	          "label",
-	          null,
-	          "Website"
-	        ),
-	        React.createElement(
-	          "div",
-	          { className: "answer" },
-	          React.createElement(
-	            "a",
-	            { href: "#" },
-	            "yhack.org"
-	          )
-	        )
-	      ),
-	      React.createElement(
-	        "li",
-	        null,
-	        React.createElement(
-	          "i",
-	          { className: "material-icons" },
-	          "share"
-	        ),
-	        React.createElement(
-	          "label",
-	          null,
-	          "Social"
-	        ),
-	        React.createElement(
-	          "div",
-	          { className: "answer" },
-	          React.createElement(
-	            "a",
-	            { href: "#" },
-	            "facebook/yhack"
-	          )
-	        )
-	      ),
-	      React.createElement(
-	        "li",
-	        null,
-	        React.createElement(
-	          "i",
-	          { className: "material-icons" },
-	          "cake"
-	        ),
-	        React.createElement(
-	          "label",
-	          null,
-	          "Created in"
-	        ),
-	        React.createElement(
-	          "div",
-	          { className: "answer" },
-	          "2008"
-	        )
-	      )
-	    );
-	  }
-	});
-
-	ClubStats.propTypes = {
-	  /*propName: PropTypes.dataType.isRequired;*/
-	};
-
-	module.exports = ClubStats;
 
 /***/ }
 /******/ ]);

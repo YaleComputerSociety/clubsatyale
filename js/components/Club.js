@@ -3,7 +3,6 @@ var React = require('react');
 var $ = require('jquery');
 var Footer = require('./Footer');
 var ExploreBar = require('./ExploreBar');
-var ClubInfo = require('./club/ClubInfo');
 
 (function (jQuery) {
   jQuery.eventEmitter = {
@@ -177,7 +176,7 @@ class ClubHeader extends React.Component {
 
     return (
       <div className="ClubHeader">
-        <div className="row-picture"></div>
+        <div className="row-picture" style={{ backgroundImage: "url("+this.props.club.cover+")" }}></div>
         <header>
           <div className="picture">
             <img src={club.picture} />
@@ -217,7 +216,7 @@ var Navbar = React.createClass({
       <div className="Navbar">
         <div className="container">
           <li className="title">
-            <a href="/">Clubs At Yale</a>
+            <a href="/clubsatyale">Clubs At Yale</a>
           </li>
           <li>
             <form>
@@ -231,15 +230,6 @@ var Navbar = React.createClass({
   }
 });
 
-function getClubData(slug, callback) {
-  $.getJSON('/api/clubs/all?slug='+slug, function (data) {
-    callback(data)
-  }).fail(function (data) {
-    callback(null)
-  })
-}
-
-
 class ClubPage extends React.Component {
   
   constructor(props) {
@@ -248,9 +238,12 @@ class ClubPage extends React.Component {
   }
 
   componentDidMount() {
-    getClubData(this.props.params.id, (club) => {
-      club ? this.setState({ club: club }) : this.setState({ is404: true })
-    })
+    var slug = this.props.params.id;
+    if (clubData[slug]) {
+      this.setState({ club: clubData[slug] })
+    } else {
+      this.setState({ is404: true })
+    }
   }
 
   render() {

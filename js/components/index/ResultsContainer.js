@@ -6,7 +6,7 @@ var PropTypes = React.PropTypes;
 
 var fake = [
   {
-    "icon": "/static/img/yale_data_science.png",
+    "picture": "/static/img/yale_data_science.png",
     "name": " Yale Data Science",
     "bio": "A group of Yale undergraduates interested in data science and machine learning",
     "size": "25",
@@ -15,7 +15,7 @@ var fake = [
     "time": 5,
   },
   {
-    "icon": "/static/img/whaling_crew.png",
+    "picture": "/static/img/whaling_crew.png",
     "name": "Yale Science Magazine",
     "bio": "Magazine about STEM issues",
     "category": ["arts", "STEM"], 
@@ -24,7 +24,7 @@ var fake = [
     "time": 4,
   },
   {
-    "icon": "/static/img/whaling_crew.png",
+    "picture": "/static/img/whaling_crew.png",
     "name": " Whaling Crew",
     "bio": "A unified, organized student group dedicated to yelling too loud and heckling too obnoxiously at Bulldog athletic events",
     "category": "athletics",
@@ -32,7 +32,7 @@ var fake = [
     "size": 25,
     "time": 4,
   }, {
-    "icon": "/static/img/federalist_party.png",
+    "picture": "/static/img/federalist_party.png",
     "name": "Federalist Party",
     "bio": "A conservative debating society/member of the Yale Political Union - we believe in the values espoused in the Federalist Papers",
     "category": "politics",
@@ -40,7 +40,7 @@ var fake = [
     "size": 50,
     "time": 7,
   }, {
-    "icon": "/static/img/just_add_water.png",
+    "picture": "/static/img/just_add_water.png",
     "name": "Just Add Water",
     "bio": "Yale's funniest improvisational comedy troupe - we do long-form, short-form, AND musical improv",
     "category": "arts",
@@ -48,7 +48,7 @@ var fake = [
     "size": 25,
     "time": 6,
   }, {
-    "icon": "/static/img/aast.jpg",
+    "picture": "/static/img/aast.jpg",
     "name": "Asian American Studies Task Force",
     "bio": "Fighting for the expansion of Asian American studies at Yale",
     "size": 15,
@@ -56,7 +56,7 @@ var fake = [
     "category": "activism",
     "time": 5,
   }, {
-    "icon": "/static/img/ygm.png",
+    "picture": "/static/img/ygm.png",
     "name": "Yale Guild of Makers",
     "bio": "Uniting makers across Yale",
     "category": "STEM",
@@ -65,7 +65,7 @@ var fake = [
     "size": 25,
     "time": 5,
   }, {
-    "icon": "/static/img/ygm.png",
+    "picture": "/static/img/ygm.png",
     "name": "The Yale Spizzwinks(?)",
     "bio": "",
     "category": "arts",
@@ -74,7 +74,7 @@ var fake = [
     "size": 35,
     "time": 5,
   }, {
-    "icon": "/static/img/ygm.png",
+    "picture": "/static/img/ygm.png",
     "name": "Society of Orpheus and Bacchus",
     "bio": "",
     "category": "arts",
@@ -83,7 +83,7 @@ var fake = [
     "size": 25,
     "time": 5,
   }, {
-    "icon": "/static/img/ygm.png",
+    "picture": "/static/img/ygm.png",
     "name": "The Duke's Men of Yale",
     "bio": "",
     "category": "arts",
@@ -92,7 +92,7 @@ var fake = [
     "size": 25,
     "time": 5,
   }, {
-    "icon": "/static/img/ygm.png",
+    "picture": "/static/img/ygm.png",
     "name": "Lux et Improvitas",
     "bio": "",
     "category": "arts",

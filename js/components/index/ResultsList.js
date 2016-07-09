@@ -27,11 +27,15 @@ var ResultsList = React.createClass({
           )
         }
         
+        var gotoClubk = () => {
+          window.location = club.slug;
+        }
+        
         return (
-          <div className="Club">
+          <div className="Club" onClick={gotoClubk}>
             <ul>
               <li className="picture">
-                <img src={club.icon} />
+                <img src={club.picture} />
               </li>
               <li>
                 <div className="name">

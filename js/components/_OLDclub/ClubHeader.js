@@ -6,7 +6,7 @@ var ClubHeader = React.createClass({
   render: function() {
     return (
       <div className="ClubHeader">
-        <div className="row-picture"></div>
+        <div className="row-picture" style={{ backgroundImage: "src("+this.props.club.cover+")" }}></div>
         <header>
           <div className="picture">
             <img src={this.props.club.picture} />
