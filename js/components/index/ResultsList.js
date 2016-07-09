@@ -45,7 +45,7 @@ var ResultsList = React.createClass({
                   )}
                   {tag}
                 </div>
-                <div className="blurb">{club.bio}</div>
+                <div className="blurb">{club.blurb}</div>
               </li>
               
               {/*<li className="stats">
