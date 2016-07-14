@@ -5,7 +5,7 @@ var path = require('path')
 var fs = require('fs')
 
 // See https://github.com/isaacs/st.
-var mount = st({ path: __dirname, url: 'clubsatyale', passthrough: true })
+var mount = st({ path: __dirname, url: '', passthrough: true })
 
 // We're statically serving the files in this folder. When requests are made
 // to files that don't exist (ie, when we're accessing a club: /clubsatyale/ydn)
@@ -32,10 +32,12 @@ http.createServer((req, res) => {
   
   // Little twist: we must serve index.html when the person requests the
   // root of the website.
-  if (req.url === "/clubsatyale/") {
+  if (req.url === "/") {
     makeStaticServer('index.html')()
   } else {
     // If file not found... serve 404.html
     mount(req, res, makeStaticServer('404.html'))
   }
 }).listen(8080);
+
+console.log("Server is running.")
