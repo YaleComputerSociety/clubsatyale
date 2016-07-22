@@ -216,7 +216,7 @@ var Navbar = React.createClass({
       <div className="Navbar">
         <div className="container">
           <li className="title">
-            <a href="/clubsatyale">Clubs At Yale</a>
+            <a href="/">Clubs At Yale</a>
           </li>
           <li>
             <form>

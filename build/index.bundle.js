@@ -52249,7 +52249,7 @@
 	          { className: 'title' },
 	          React.createElement(
 	            'a',
-	            { href: '/clubsatyale' },
+	            { href: '/' },
 	            'Clubs At Yale'
 	          )
 	        ),
