@@ -262,8 +262,10 @@ class ClubPage extends React.Component {
       return (
         <div className="ClubPage">
           <Navbar />
-          Club could not be found.
-          <ExploreBar />
+          <div className="container">
+            Club could not be found.
+            <ExploreBar />
+          </div>
           <Footer />
         </div>
       )

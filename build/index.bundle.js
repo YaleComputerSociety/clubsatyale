@@ -52315,8 +52315,12 @@
 	          'div',
 	          { className: 'ClubPage' },
 	          React.createElement(Navbar, null),
-	          'Club could not be found.',
-	          React.createElement(ExploreBar, null),
+	          React.createElement(
+	            'div',
+	            { className: 'container' },
+	            'Club could not be found.',
+	            React.createElement(ExploreBar, null)
+	          ),
 	          React.createElement(Footer, null)
 	        );
 	      } else {
